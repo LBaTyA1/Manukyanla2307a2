@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36908.2 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "labgit", "labgit\labgit.csproj", "{89CB467A-965F-4FB3-842E-D942DDB418AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89CB467A-965F-4FB3-842E-D942DDB418AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89CB467A-965F-4FB3-842E-D942DDB418AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89CB467A-965F-4FB3-842E-D942DDB418AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89CB467A-965F-4FB3-842E-D942DDB418AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFE57B52-58EA-4635-A305-C4049BCF4059}
+	EndGlobalSection
+EndGlobal
