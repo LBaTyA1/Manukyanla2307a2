@@ -1,0 +1,69 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Задача 3</title><style>
+body{font-family:"DejaVu Sans",sans-serif;font-size:13px;margin:0}
+section{page-break-after:always;padding:10px 20px}
+h2{margin:4px 0 8px}
+.t{border-collapse:collapse;margin:6px 0} .t td,.t th{border:1px solid #000;padding:2px 10px;font-weight:normal;text-align:left}
+.sys{display:flex;align-items:center;margin:6px 0} .br{font-size:52px;line-height:1;margin-right:4px;font-weight:200} .lab{margin-left:20px}
+.f{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 2px} .f span:first-child{border-bottom:1px solid #000;padding:0 3px}
+.eq{margin:6px 0} .two{display:flex;gap:80px} img{width:420px;display:block;margin:4px 0}
+.ans{border:1px solid #000;display:inline-block;padding:3px 8px}
+</style></head><body>
+
+<section>
+<h2>Задача 3. Вариант 1</h2>
+<table class="t"><tr><th colspan=2>Сырьё</th><th colspan=2>Товары</th></tr>
+<tr><td>Наименование</td><td>Запас</td><td>T1</td><td>T2</td></tr>
+<tr><td>S1</td><td>60</td><td>2</td><td>6</td></tr>
+<tr><td>S2</td><td>70</td><td>5</td><td>5</td></tr>
+<tr><td>S3</td><td>90</td><td>9</td><td>3</td></tr>
+<tr><td colspan=2>Удельная прибыль</td><td>70</td><td>90</td></tr></table>
+<p>X = (x₁, x₂) &nbsp; Кол-во x₁, x₂</p>
+<div class="sys"><span class="br">{</span><div>2x₁ + 6x₂ ≤ 60<br>5x₁ + 5x₂ ≤ 70<br>9x₁ + 3x₂ ≤ 90</div><span class="lab">(1)</span>
+<span style="margin-left:40px">x₁, x₂ ≥ 0 &nbsp; (2)</span></div>
+<p>Z = 70x₁ + 90x₂ → max</p>
+<p><b>Построение прямых:</b></p>
+<table class="t pts"><tr><th>Прямая</th><th>x₁ = 0</th><th>x₂ = 0</th></tr>
+<tr><td>(I) 2x₁ + 6x₂ = 60</td><td>x₂ = 10</td><td>x₁ = 30</td></tr>
+<tr><td>(II) 5x₁ + 5x₂ = 70</td><td>x₂ = 14</td><td>x₁ = 14</td></tr>
+<tr><td>(III) 9x₁ + 3x₂ = 90</td><td>x₂ = 30</td><td>x₁ = 10</td></tr></table>
+<p>Проверка точкой O(0; 0): 0 ≤ 60, 0 ≤ 70, 0 ≤ 90 — верно ⇒ берём полуплоскости, содержащие O.<br>
+ОДР — многоугольник OABCD.</p>
+<img src="graph_var1.png">
+<p>c̄ = (70; 90). Строим линию уровня Z = 0 ⊥ c̄ и перемещаем по направлению c̄. Последняя точка ОДР — B = (I) ∩ (II):</p>
+<div class="sys"><span class="br">{</span><div>2x₁ + 6x₂ = 60<br>5x₁ + 5x₂ = 70</div></div>
+<p>x₁ + 3x₂ = 30, &nbsp; x₁ + x₂ = 14 &nbsp;⇒&nbsp; 2x₂ = 16, &nbsp; x₂ = 8, &nbsp; x₁ = 6</p>
+<p>B(6; 8)<br>Z max = 70·6 + 90·8 = 420 + 720 = 1140</p>
+<p class="ans"><b>Ответ:</b> X* = (6; 8), Z max = 1140</p>
+<p><b>Анализ устойчивости</b></p>
+<p>Оптимальное решение лежит на пересечении прямых (I) и (II).</p><div class="two"><div class="chain"><div class="eq"><span class="f"><span>2</span><span>6</span></span> ≤ <span class="f"><span>x</span><span>90</span></span> ≤ <span class="f"><span>5</span><span>5</span></span></div><div class="eq"><span class="f"><span>2·90</span><span>6</span></span> ≤ x ≤ <span class="f"><span>5·90</span><span>5</span></span></div><div class="eq">30 ≤ x ≤ 90</div></div><div class="chain"><div class="eq"><span class="f"><span>2</span><span>6</span></span> ≤ <span class="f"><span>70</span><span>x</span></span> ≤ <span class="f"><span>5</span><span>5</span></span></div><div class="eq"><span class="f"><span>5</span><span>5</span></span> ≤ <span class="f"><span>x</span><span>70</span></span> ≤ <span class="f"><span>6</span><span>2</span></span></div><div class="eq">70 ≤ x ≤ 210</div></div></div>
+</section>
+
+<section>
+<h2>Задача 3. Вариант 2</h2>
+<table class="t"><tr><th colspan=2>Сырьё</th><th colspan=2>Товары</th></tr>
+<tr><td>Наименование</td><td>Запас</td><td>T1</td><td>T2</td></tr>
+<tr><td>S1</td><td>60</td><td>2</td><td>6</td></tr>
+<tr><td>S2</td><td>70</td><td>5</td><td>5</td></tr>
+<tr><td>S3</td><td>90</td><td>9</td><td>3</td></tr>
+<tr><td colspan=2>Удельная прибыль</td><td>120</td><td>90</td></tr></table>
+<p>X = (x₁, x₂) &nbsp; Кол-во x₁, x₂</p>
+<div class="sys"><span class="br">{</span><div>2x₁ + 6x₂ ≤ 60<br>5x₁ + 5x₂ ≤ 70<br>9x₁ + 3x₂ ≤ 90</div><span class="lab">(1)</span>
+<span style="margin-left:40px">x₁, x₂ ≥ 0 &nbsp; (2)</span></div>
+<p>Z = 120x₁ + 90x₂ → max</p>
+<p><b>Построение прямых:</b></p>
+<table class="t pts"><tr><th>Прямая</th><th>x₁ = 0</th><th>x₂ = 0</th></tr>
+<tr><td>(I) 2x₁ + 6x₂ = 60</td><td>x₂ = 10</td><td>x₁ = 30</td></tr>
+<tr><td>(II) 5x₁ + 5x₂ = 70</td><td>x₂ = 14</td><td>x₁ = 14</td></tr>
+<tr><td>(III) 9x₁ + 3x₂ = 90</td><td>x₂ = 30</td><td>x₁ = 10</td></tr></table>
+<p>Проверка точкой O(0; 0): 0 ≤ 60, 0 ≤ 70, 0 ≤ 90 — верно ⇒ берём полуплоскости, содержащие O.<br>
+ОДР — многоугольник OABCD.</p>
+<img src="graph_var2.png">
+<p>c̄ = (120; 90). Строим линию уровня Z = 0 ⊥ c̄ и перемещаем по направлению c̄. Последняя точка ОДР — C = (II) ∩ (III):</p>
+<div class="sys"><span class="br">{</span><div>5x₁ + 5x₂ = 70<br>9x₁ + 3x₂ = 90</div></div>
+<p>x₁ + x₂ = 14, &nbsp; 3x₁ + x₂ = 30 &nbsp;⇒&nbsp; 2x₁ = 16, &nbsp; x₁ = 8, &nbsp; x₂ = 6</p>
+<p>C(8; 6)<br>Z max = 120·8 + 90·6 = 960 + 540 = 1500</p>
+<p class="ans"><b>Ответ:</b> X* = (8; 6), Z max = 1500</p>
+<p><b>Анализ устойчивости</b></p>
+<p>Оптимальное решение лежит на пересечении прямых (II) и (III).</p><div class="two"><div class="chain"><div class="eq"><span class="f"><span>5</span><span>5</span></span> ≤ <span class="f"><span>x</span><span>90</span></span> ≤ <span class="f"><span>9</span><span>3</span></span></div><div class="eq"><span class="f"><span>5·90</span><span>5</span></span> ≤ x ≤ <span class="f"><span>9·90</span><span>3</span></span></div><div class="eq">90 ≤ x ≤ 270</div></div><div class="chain"><div class="eq"><span class="f"><span>5</span><span>5</span></span> ≤ <span class="f"><span>120</span><span>x</span></span> ≤ <span class="f"><span>9</span><span>3</span></span></div><div class="eq"><span class="f"><span>3</span><span>9</span></span> ≤ <span class="f"><span>x</span><span>120</span></span> ≤ <span class="f"><span>5</span><span>5</span></span></div><div class="eq">40 ≤ x ≤ 120</div></div></div>
+</section>
+</body></html>
