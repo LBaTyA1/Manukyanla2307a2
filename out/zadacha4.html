@@ -1,0 +1,56 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Задача 4</title><style>
+body{font-family:"DejaVu Sans",sans-serif;font-size:13px;margin:0}
+section{page-break-after:always;padding:10px 20px}
+h2{margin:4px 0 8px}
+.t{border-collapse:collapse;margin:6px 0} .t td,.t th{border:1px solid #000;padding:2px 10px;font-weight:normal;text-align:left}
+.sys{display:flex;align-items:center;margin:6px 0} .br{font-size:52px;line-height:1;margin-right:4px;font-weight:200} .lab{margin-left:20px}
+.f{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 2px} .f span:first-child{border-bottom:1px solid #000;padding:0 3px}
+.eq{margin:6px 0} .two{display:flex;gap:80px} img{width:420px;display:block;margin:4px 0}
+.ans{border:1px solid #000;display:inline-block;padding:3px 8px}
+</style></head><body><section><h2>Задача 4. Вариант 1</h2>
+<table class="t"><tr><th colspan=2>Питательные вещества</th><th colspan=2>Корма</th></tr>
+<tr><td>Наименование</td><td>Норма</td><td>K1</td><td>K2</td></tr>
+<tr><td>S1</td><td>12</td><td>1</td><td>4</td></tr><tr><td>S2</td><td>15</td><td>3</td><td>1</td></tr>
+<tr><td>S3</td><td>30</td><td>3</td><td>5</td></tr><tr><td colspan=2>Цена</td><td>15</td><td>20</td></tr></table>
+<p>X = (x₁, x₂) &nbsp; Кол-во кормов K1, K2</p>
+<div class="sys"><span class="br">{</span><div>x₁ + 4x₂ ≥ 12<br>3x₁ + x₂ ≥ 15<br>3x₁ + 5x₂ ≥ 30</div><span class="lab">(1)</span>
+<span style="margin-left:40px">x₁, x₂ ≥ 0 &nbsp; (2)</span></div>
+<p>Z = 15x₁ + 20x₂ → min</p>
+<p><b>Построение прямых:</b></p>
+<table class="t"><tr><th>Прямая</th><th>x₁ = 0</th><th>x₂ = 0</th></tr>
+<tr><td>(I) x₁ + 4x₂ = 12</td><td>x₂ = 3</td><td>x₁ = 12</td></tr>
+<tr><td>(II) 3x₁ + x₂ = 15</td><td>x₂ = 15</td><td>x₁ = 5</td></tr>
+<tr><td>(III) 3x₁ + 5x₂ = 30</td><td>x₂ = 6</td><td>x₁ = 10</td></tr></table>
+<p>Проверка точкой O(0; 0): 0 ≥ 12, 0 ≥ 15, 0 ≥ 30 — неверно ⇒ берём полуплоскости, не содержащие O.<br>
+ОДР — неограниченная область, вершины A(0; 15), B, C, D(12; 0).</p>
+<img src="z4_graph_var1.png">
+<p>c̄ = (15; 20). Строим линию уровня Z = 0 ⊥ c̄ и перемещаем по направлению c̄. Первая точка ОДР (точка входа) — B = (II) ∩ (III):</p>
+<div class="sys"><span class="br">{</span><div>3x₁ + x₂ = 15<br>3x₁ + 5x₂ = 30</div></div>
+<p>Вычтем: 4x₂ = 15, &nbsp; x₂ = 3,75, &nbsp; 3x₁ = 15 − 3,75 = 11,25, &nbsp; x₁ = 3,75</p>
+<p>B(3,75; 3,75)<br>Z min = 15·3,75 + 20·3,75 = 56,25 + 75 = 131,25</p>
+<p class="ans"><b>Ответ:</b> X* = (3,75; 3,75), Z min = 131,25</p>
+<p><b>Анализ устойчивости</b></p><p>Оптимальное решение лежит на пересечении прямых (II) и (III).</p><div class="two"><div class="chain"><div class="eq"><span class="f"><span>3</span><span>5</span></span> ≤ <span class="f"><span>x</span><span>20</span></span> ≤ <span class="f"><span>3</span><span>1</span></span></div><div class="eq"><span class="f"><span>3·20</span><span>5</span></span> ≤ x ≤ <span class="f"><span>3·20</span><span>1</span></span></div><div class="eq">12 ≤ x ≤ 60</div></div><div class="chain"><div class="eq"><span class="f"><span>3</span><span>5</span></span> ≤ <span class="f"><span>15</span><span>x</span></span> ≤ <span class="f"><span>3</span><span>1</span></span></div><div class="eq"><span class="f"><span>1</span><span>3</span></span> ≤ <span class="f"><span>x</span><span>15</span></span> ≤ <span class="f"><span>5</span><span>3</span></span></div><div class="eq">5 ≤ x ≤ 25</div></div></div>
+<p>Питательные вещества:</p><p>S1: 3,75 + 4·3,75 = 18,75 &gt; 12 — с избытком (6,75)<br>S2: 3·3,75 + 3,75 = 15 = 15 — по норме<br>S3: 3·3,75 + 5·3,75 = 30 = 30 — по норме</p></section><section><h2>Задача 4. Вариант 2</h2>
+<table class="t"><tr><th colspan=2>Питательные вещества</th><th colspan=2>Корма</th></tr>
+<tr><td>Наименование</td><td>Норма</td><td>K1</td><td>K2</td></tr>
+<tr><td>S1</td><td>12</td><td>1</td><td>4</td></tr><tr><td>S2</td><td>15</td><td>3</td><td>1</td></tr>
+<tr><td>S3</td><td>30</td><td>3</td><td>5</td></tr><tr><td colspan=2>Цена</td><td>15</td><td>30</td></tr></table>
+<p>X = (x₁, x₂) &nbsp; Кол-во кормов K1, K2</p>
+<div class="sys"><span class="br">{</span><div>x₁ + 4x₂ ≥ 12<br>3x₁ + x₂ ≥ 15<br>3x₁ + 5x₂ ≥ 30</div><span class="lab">(1)</span>
+<span style="margin-left:40px">x₁, x₂ ≥ 0 &nbsp; (2)</span></div>
+<p>Z = 15x₁ + 30x₂ → min</p>
+<p><b>Построение прямых:</b></p>
+<table class="t"><tr><th>Прямая</th><th>x₁ = 0</th><th>x₂ = 0</th></tr>
+<tr><td>(I) x₁ + 4x₂ = 12</td><td>x₂ = 3</td><td>x₁ = 12</td></tr>
+<tr><td>(II) 3x₁ + x₂ = 15</td><td>x₂ = 15</td><td>x₁ = 5</td></tr>
+<tr><td>(III) 3x₁ + 5x₂ = 30</td><td>x₂ = 6</td><td>x₁ = 10</td></tr></table>
+<p>Проверка точкой O(0; 0): 0 ≥ 12, 0 ≥ 15, 0 ≥ 30 — неверно ⇒ берём полуплоскости, не содержащие O.<br>
+ОДР — неограниченная область, вершины A(0; 15), B, C, D(12; 0).</p>
+<img src="z4_graph_var2.png">
+<p>c̄ = (15; 30). Строим линию уровня Z = 0 ⊥ c̄ и перемещаем по направлению c̄. Первая точка ОДР (точка входа) — C = (I) ∩ (III):</p>
+<div class="sys"><span class="br">{</span><div>x₁ + 4x₂ = 12<br>3x₁ + 5x₂ = 30</div></div>
+<p>x₁ = 12 − 4x₂; &nbsp; 3(12 − 4x₂) + 5x₂ = 30 &nbsp;⇒&nbsp; 36 − 7x₂ = 30, &nbsp; x₂ = 6/7, &nbsp; x₁ = 12 − 24/7 = 60/7</p>
+<p>C(60/7; 6/7)<br>Z min = 15·60/7 + 30·6/7 = 900/7 + 180/7 = 1080/7 ≈ 154,29</p>
+<p class="ans"><b>Ответ:</b> X* = (60/7; 6/7), Z min = 1080/7 ≈ 154,29</p>
+<p><b>Анализ устойчивости</b></p><p>Оптимальное решение лежит на пересечении прямых (I) и (III).</p><div class="two"><div class="chain"><div class="eq"><span class="f"><span>1</span><span>4</span></span> ≤ <span class="f"><span>x</span><span>30</span></span> ≤ <span class="f"><span>3</span><span>5</span></span></div><div class="eq"><span class="f"><span>1·30</span><span>4</span></span> ≤ x ≤ <span class="f"><span>3·30</span><span>5</span></span></div><div class="eq">7,5 ≤ x ≤ 18</div></div><div class="chain"><div class="eq"><span class="f"><span>1</span><span>4</span></span> ≤ <span class="f"><span>15</span><span>x</span></span> ≤ <span class="f"><span>3</span><span>5</span></span></div><div class="eq"><span class="f"><span>5</span><span>3</span></span> ≤ <span class="f"><span>x</span><span>15</span></span> ≤ <span class="f"><span>4</span><span>1</span></span></div><div class="eq">25 ≤ x ≤ 60</div></div></div>
+<p>Питательные вещества:</p><p>S1: 60/7 + 4·6/7 = 84/7 = 12 = 12 — по норме<br>S2: 3·60/7 + 6/7 = 186/7 ≈ 26,57 &gt; 15 — с избытком (81/7 ≈ 11,57)<br>S3: 3·60/7 + 5·6/7 = 210/7 = 30 = 30 — по норме</p></section></body></html>
