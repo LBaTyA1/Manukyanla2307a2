@@ -25,6 +25,7 @@ body {
   margin-inline: auto;
 }
 
+/* Кнопки */
 .btn {
   border: none;
   background: var(--accent);
@@ -52,6 +53,7 @@ body {
   background: #d7efe3;
 }
 
+/* Кнопка-ссылка */
 .link {
   border: none;
   background: none;

@@ -34,21 +34,17 @@ npm run dev  # запуск на http://localhost:5173
 
 ```
 vue-shop/
-├── index.html                       — точка входа HTML
-├── package.json                     — зависимости и скрипты
-├── vite.config.js                   — конфиг Vite + алиас '@' на src
+├── index.html                   — точка входа HTML
+├── package.json                 — зависимости и скрипты
+├── vite.config.js               — конфиг Vite
 └── src/
-    ├── main.js                      — создание приложения Vue
-    ├── App.vue                      — главный компонент: поиск, фильтр, сортировка
-    ├── assets/main.css              — глобальные стили и переменные
-    ├── data/products.js             — массив товаров
-    ├── composables/useCart.js       — логика корзины, localStorage, промокод
+    ├── main.js                  — создание приложения Vue
+    ├── App.vue                  — каталог, фильтры, корзина, промокод
+    ├── style.css                — глобальные стили и переменные
+    ├── data/products.js         — массив товаров + формат цены
     └── components/
-        ├── TheHeader.vue            — шапка со счётчиком товаров
-        ├── FiltersPanel.vue         — поиск, категория, сортировка
-        ├── ProductCard.vue          — карточка товара
-        ├── ProductList.vue          — сетка карточек
-        └── ShoppingCart.vue         — корзина, промокод, итоговая сумма
+        ├── ProductCard.vue      — карточка товара
+        └── CartItem.vue         — строка товара в корзине
 ```
 
 ## Как заменить эмодзи на картинки

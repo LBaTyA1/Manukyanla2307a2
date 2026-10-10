@@ -10,3 +10,8 @@ export const products = [
   { id: 7, name: 'Монитор 27"', price: 24990, category: 'Электроника', image: '🖥️' },
   { id: 8, name: 'Кепка "Frontend"', price: 1100, category: 'Одежда', image: '🧢' },
 ]
+
+/** Формат цены: 89990 -> "89 990 ₽". Нужен и в карточке, и в корзине. */
+export function formatPrice(value) {
+  return new Intl.NumberFormat('ru-RU').format(value) + ' ₽'
+}

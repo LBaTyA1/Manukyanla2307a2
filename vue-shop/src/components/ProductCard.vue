@@ -1,10 +1,10 @@
 <script setup>
 import { computed } from 'vue'
-import { formatPrice } from '@/composables/useCart'
+import { formatPrice } from '../data/products.js'
 
 const props = defineProps({
   product: { type: Object, required: true },
-  discount: { type: Number, default: 0 },
+  discount: { type: Number, default: 0 }, // 0 или 0.1 (промокод WEB)
   inCart: { type: Boolean, default: false },
 })
 
@@ -12,8 +12,11 @@ defineEmits(['add'])
 
 // Если в image лежит путь к файлу (/img/..., .png, http...) — показываем <img>,
 // иначе рисуем эмодзи как текст.
-const isImageFile = computed(() => /^(https?:|\/|\.)|\.(png|jpe?g|svg|webp|gif)$/i.test(props.product.image))
+const isImageFile = computed(() =>
+  /^(https?:|\/|\.)|\.(png|jpe?g|svg|webp|gif)$/i.test(props.product.image),
+)
 
+// Цена товара с учётом скидки по промокоду
 const finalPrice = computed(() => Math.round(props.product.price * (1 - props.discount)))
 </script>
 
