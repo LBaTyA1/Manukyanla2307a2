@@ -9,6 +9,4 @@ export const products = [
   { id: 6, name: 'Стикерпак с логотипом', price: 150, category: 'Аксессуары', image: '🏷️' },
   { id: 7, name: 'Монитор 27"', price: 24990, category: 'Электроника', image: '🖥️' },
   { id: 8, name: 'Кепка "Frontend"', price: 1100, category: 'Одежда', image: '🧢' },
-  { id: 9, name: 'Рюкзак для ноутбука', price: 4300, category: 'Аксессуары', image: '🎒' },
-  { id: 10, name: 'Футболка "JS Forever"', price: 1800, category: 'Одежда', image: '👕' },
 ]

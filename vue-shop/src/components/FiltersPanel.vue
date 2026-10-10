@@ -37,7 +37,6 @@ defineEmits(['update:search', 'update:category', 'update:sort'])
       <option value="default">Без сортировки</option>
       <option value="asc">Цена: по возрастанию</option>
       <option value="desc">Цена: по убыванию</option>
-      <option value="name">По названию (А-Я)</option>
     </select>
   </div>
 </template>

@@ -31,7 +31,6 @@ const visibleProducts = computed(() => {
 
   if (sort.value === 'asc') result = [...result].sort((a, b) => a.price - b.price)
   if (sort.value === 'desc') result = [...result].sort((a, b) => b.price - a.price)
-  if (sort.value === 'name') result = [...result].sort((a, b) => a.name.localeCompare(b.name, 'ru'))
 
   return result
 })
